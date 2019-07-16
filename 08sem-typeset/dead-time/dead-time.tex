@@ -1,0 +1,215 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{../riemlabm}
+\usepackage{fancyhdr}
+\title{Dead Time of GM Counter}
+\lfoot{Regional Institute of Education Mysore}
+\lhead{Dead Time of GM Counter}
+\chead{}
+\rhead{Semester 8}
+\cfoot{}
+\rfoot{Physics}
+\pagestyle{fancy}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Python,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\begin{document}
+		\maketitle
+		
+		\section{OBJECTIVE}
+			To determine the dead time of a Geiger-M{\"u}ller counter by the double-source method.
+			
+		\section{REQUIREMENTS}
+			Setup for ST-350 Geiger-M{\"u}ller counter, GM tube and stand, shelf stand, serial cable and a source holder, two radioactive sources: $^{137}$Cs \& $^{132}$Ba.
+			
+		\section{INTRODUCTION}
+			
+			Energetic nuclear particles (ionizing radiation) passing through the cylinder and entering the GM tube ionize the gas molecules. The freed electrons are attracted toward the wire and the positive ions toward the cylinder. If the voltage between the wire and cylinder is high enough, the accelerated electrons acquire enough energy to ionize other gas molecules on their way to the positive wire. The electrons from the secondary ionizations produce additional ionizations. This process is called \textbf{cumulative ionization}.
+			
+			As a result, an \emph{avalanche} discharge sets in, and a current is produced in the resistor. This reduces the potential difference between wire and cylinder to the point where cumulative ionization does not occur. After the momentary current pulse, which lasts on the order of microseconds, the potential difference between the wire and the cylinder resumes its original value.
+			
+			A finite time is required for the discharge to be cleared from the tube. During this time, the voltage of the tube is less than that required to detect other radiation that might arrive. This recovery time is referred to as the \textbf{dead time} of the tube. If a large amount of radiation arrives at the tube, the counting rate (counts per minute, or cpm) as indicated on the counting equipment will be less than the true value.\\
+			
+			Let us define the following variables:
+			
+			\begin{tabular}{ccl}
+				$T$&:& The dead time of the detector\\
+				$t_r$&:& The real time the detector is operating. This is the actual time the detector is on.\\
+					& &\textit{(It is our counting time and does not depend on the dead time.)}\\
+				$t_{R}$&:& The live time the detector is operating.\\
+				& & \textit{(It is the time the detector is able to record count and depends on the dead time.)}\\
+				$c$&:& Total number of counts that we record.\\
+				$n$&:& The measured counting rate; $\left[ n = \dfrac{c}{t_r} \right]$\\
+				$N$&:& The true counting rate; $\left[ N = \dfrac{c}{t_R} \right]$
+			\end{tabular}
+			
+			Note that
+			
+			\begin{equation}
+				\dfrac{n}{N} = \dfrac{c/t_r}{c/t_R} = \dfrac{t_R}{t_r}
+			\end{equation}
+			
+			Since $cT$ is the total time the detector is unable to read counts during the time $t_r$,
+			
+			\begin{equation}
+				t_R = t_r - cT
+			\end{equation}
+			
+			On solving (1) \& (2),
+		\begin{dmath*}
+			\dfrac{t_R}{t_r} = \dfrac{t_{r} - cT}{t_r} = 1 - \left( \dfrac{c}{t_r} \right)T = 1 - nT
+		\end{dmath*}
+	
+	\begin{equation*}
+		\therefore \dfrac{t_R}{t_r} = 1 - nT		
+	\end{equation*}
+	Now, from (1), $$\dfrac{t_R}{t_r}=\dfrac{n}{N}$$
+	
+	$$	\implies \dfrac{n}{N} = 1 - nT $$
+	\begin{equation}
+		\therefore N = \dfrac{n}{1 - nT}
+	\end{equation}
+	
+	Let
+	\begin{tabular}{ccl}
+	$n_1$&:& measured counting rate with source 1.\\
+	$n_2$&:& measured counting rate with source 2.\\
+	$n_{12}$&:& measured counting rate with both sources 1 \& 2.	
+	\end{tabular}
+	\vspace{10pt}\\
+	Then, the true counting rate is given by: 
+	\begin{equation}
+		N_{12} = N_1 + N_2
+	\end{equation}
+	Using (3),
+	$$	\dfrac{n_{12}}{1-n_{12}T} = \dfrac{n_{1}}{1-n_{1}T} + \dfrac{n_{2}}{1-n_{2}T}$$
+	
+	The solutions to these equations is given by:
+	\begin{equation}
+		\boxed{T = \dfrac{n_{1} + n_{2} - n_{12}}{2n_{1}n_{2}}}
+	\end{equation}
+	
+	The above equation can be used to determine the dead time $T$ of the GM counter.
+	
+	\section{Procedure}
+	
+	\begin{enumerate}
+		\item 	Set up the GM counter 
+		
+		\item 	Introduce a $\gamma$-source ($^{132}$Ba) in the double source holder.
+		
+		\item 	Record the count rate $n_1$ by measuring counts in a given time.
+		
+		\item 	Fix the second $\gamma$-source ($^{137}$Cs) by the side of the first source.
+		
+		\item 	Determine the count rate $n_{12}$.
+		
+		\item 	Now remove the first source and determine the count rate due to the second source alone, $n_2$.
+		
+		\item 	Repeat this sequence of counting and calculate the dead time by the equation (5).
+	\end{enumerate}
+	
+	\section{Observations}
+		
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			\rowcolor{b1!50}\multicolumn{3}{|c|}{First source}&	\multicolumn{3}{c|}{Second source}&	\multicolumn{3}{c|}{Both sources}\\ \hline
+			
+			\rowcolor{b1!25}No. of&	Time&	Counting&	No. of&	Time&	Counting&	No. of&	Time&	Counting\\
+			
+			\rowcolor{b1!25}counts&	taken&	rate ($n_1$)&	counts&	taken&	rate ($n_2$)&	counts&	taken&	rate ($n_{12}$)\\
+			
+			\rowcolor{b1!25}&	(s)&	&	&	(s)&	&	&	(s)& \\ \hline
+			
+			&&&&&&&& \\ \hline
+			&&&&&&&& \\ \hline
+		\end{tabular}
+	\vspace{10pt}\\
+	Mean $n_1$ = \rule{20ex}{0.2pt}
+	\vspace{5pt}\\
+	Mean $n_2$ = \rule{20ex}{0.2pt}
+	\vspace{5pt}\\
+	Mean $n_{12}$ = \rule{20ex}{0.2pt}
+	
+	\section{Calculations}
+	
+	$$ T = \dfrac{n_1 + n_2 - n_{12}}{2n_{1}n_{2}} = \rule{20ex}{0.2pt}$$
+	
+	
+	\begin{comment}
+		\section{Python Code}
+		\begin{lstlisting}
+		print "Define the time (in seconds) during which the count is taken: "
+		t = input(" ")	# The total time during which the counts are recorded
+		t1 = t 
+		t2 = t
+		
+		def meanc(i):	# A Function to calculate the mean count rate from two given counts
+		while i==1:
+		
+		print "TRIAL No. 1\n"
+		c1 = float(input("Enter count: "))
+		
+		n1 = c1/t1
+		
+		print "\nTRIAL No. 2\n"
+		c2 = float(input("Enter count: "))
+		
+		n2 = c2/t2
+		
+		n = (n1+n2)/2
+		
+		return n
+		
+		print "__________FIRST SOURCE ALONE__________"
+		
+		n1 = meanc(1)
+		print "\nThe mean count rate of first source alone is ",n1,"\n"
+		
+		print "__________FIRST & SECOND SOURCE TOGETHER__________"
+		
+		n12 = meanc(1)
+		print "\nThe mean count rate of first and second source together is ",n12,"\n"
+		
+		print "__________SECOND SOURCE ALONE__________"
+		
+		n2 = meanc(1)
+		print "\nThe mean count rate of second source alone is ",n2,"\n"
+		
+		print "\n__________DEAD TIME__________\n"
+		
+		T = (n1 + n2 - n12)/(2*n1*n2)
+		
+		print "The dead time is calculated to be: ",T," seconds"
+		
+		print "\nThe dead time is determined to be: ",T*1000," milliseconds"
+		
+		\end{lstlisting}
+		
+	\end{comment}		
+	
+	\section{Result}
+	
+		The dead time of the GM counter by the double source method is determined to be \rule{20ex}{0.2pt}ms.
+\end{document} 
