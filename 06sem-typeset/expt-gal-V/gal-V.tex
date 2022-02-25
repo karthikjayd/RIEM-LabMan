@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{riemlabm}
+\usepackage{lipsum}
+
+\title{Conversion of galvanometer to Voltmeter}
+\begin{document}
+	\maketitle
+	\section{OBJECTIVES}
+	To convert a galvanometer to voltmeter.
+	\section{REQUIREMENTS}
+	Galvanometer, power supply(DC), plug keys, resistance boxes($0-1000\Omega$ and $0-10000\Omega$)
+	
+	\section{INTRODUCTION}
+	A voltmeter is an instrument of high resistance so that when it is connected across an element for measurement, the voltmeter draws a negligble current through it. Suppose we want to convert a galvanometer of resistance G into a voltmeter of range $ 0- V $ where $ V>I_gG$ where $I_g $is the current through the galvanometer. Then the series resistance R to be connected is given by;
+		$$\dfrac{V}{R+G} = I_g$$	
+		\begin{equation}
+		\Rightarrow R = \dfrac{V}{I_g} - G
+		\end{equation}
+	\section{PROCEDURE}
+	\subsection{To find the resistance G of the galvanometer.}
+	\begin{enumerate}
+		\item  Set up the circuit as shown in the circuit diagram.
+		\item Introduce suitable resistance R such that with $K_2$ open and $K_1$ closed the galvanometer gives a full scale deflection of any n division.
+		\item Now introduce some resistance in S such that the deflection is reduced to  half the initial value. 
+		\item Then if R is very large compared to G, the resistance introduced in S is equal o resistance of the galvanometer.
+		 
+	\end{enumerate}
+	\subsection{To determine $K$, the figure of merit of galvanometer.}
+	\begin{enumerate}
+		\item Figure of merit of galvanometer is defined as the current required to produce unit deflection in the galvanometer. Connect the circuit as shown in the diagram.
+		\item A resistance R is introduced in the circuit and the deflection $\theta$ produced in the galvanometer is noted down.
+		\item The current I through the galvanometer is given by 
+			$$ I = \dfrac{E}{R+G}$$
+		where E is the emf of the cell.
+		The figure of merit of galvanometer is defined by
+		
+			$$ K = \dfrac{I}{\theta} = \dfrac{E}{\theta(R+G)}\approx E\times \text{slope}$$
+		\item The experiment is repeated for various values of R and the mean value of K is noted using a plot of $\dfrac{I}{\theta}$ versus R.
+		
+			\end{enumerate}
+			\subsection{To determine the resistance $R_s$, required to be added in series}
+			\begin{enumerate}
+				\item If N divisions correspond to full scale deflection of the galvanometer, the current $I_g$ required to produce full scale deflection is 
+					$$I_g = KN$$
+				Calculate the value of R to be added to the galvanometer using the relation $$ R = \dfrac{V}{I_g} - G$$
+				\item Connect the resistance to the galvanometer in series. Now the galvanometer (V is the range of the voltmeter) can be used as a voltmeter with terminals at A and B. It is used to measure DC voltages in the particular range.  
+			\end{enumerate}
+	\section{Observations}
+	\subsection{Part 1:}
+	
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Sl.& R& S& G& Average\\
+		No& ($\Omega$)&($\Omega$)&($\Omega$)&($\Omega$) \\
+		\hline
+		&&&&\\
+		&&&&\\
+		&&&&\\
+		&&&&\\
+		\hline
+	\end{tabular}
+	\subsection{Part 2:}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		R($\Omega$)& $\theta$& $\frac{1}{\theta}$\\
+		\hline
+		&&\\&&\\&&\\&&\\
+		\hline
+	\end{tabular}
+	\subsection{Part 3:}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$V$(V)& $V'$(V)& $V-V'$(V)\\
+		\hline
+		&&\\&&\\&&\\&&\\&&\\ \hline
+	\end{tabular}
+	
+	\section{CALCULATIONS}
+	\subsection{Figure of merit of galvanometer.}
+		
+	$$ K = \dfrac{I}{\theta} = \dfrac{E}{\theta(R+G)} \approx \dfrac{E}{R\theta}$$
+	$E =\rule{10ex}{0.2pt} V $\\
+
+	From the graph, \\ 
+	$$\dfrac{1}{\theta} = \text{slope} =\rule{10ex}{0.2pt}$$ 
+	$$ K = E \times \dfrac{1}{R\theta} = \rule{10ex}{0.2pt}$$
+	\subsection{To determine the resistance $R_s$, required to be added in series}
+	
+	$$I_g = KN = \rule{10ex}{0.2pt}$$\\ 
+	Value of R to be added to galvanometer\\
+	$$R = \dfrac{V}{I_g} - G  = \rule{10ex}{0.2pt}$$
+		\section{RESULT}
+	\begin{enumerate}
+		\item 	The figure of merit of galvanometer, K is \rule{20ex}{0.2pt}
+		\item 	The resistanc eof the galvanometer is  \rule{20ex}{0.2pt}
+		\item 	The resistance in series to be added for conversion into a voltmeter is  \rule{20ex}{0.2pt}
+\end{enumerate}
+
+	\section{PRECAUTIONS}
+	Insert a high resistance in the circuit before switching the circuit ON, inorder to protect the galvanometer from damage due to heavy current.
+		
+	
+\end{document}
