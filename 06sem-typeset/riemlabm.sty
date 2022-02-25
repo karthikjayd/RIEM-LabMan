@@ -1,0 +1,126 @@
+% RIEM lab manual style file.
+% Designed to be used with pdfLaTeX.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{riemlabm}
+
+% Start your document with:
+% \documentclass[11pt,a4paper]{article}
+% \usepackage{riemlabm}
+
+\setlength{\textwidth}{452.0pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\addtolength{\topmargin}{-4\baselineskip}
+\addtolength{\textheight}{8\baselineskip}
+
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage[osf,sc]{mathpazo} fonts set by Dr.Niranjan 
+%\linespread{1.05} % a bit more for Palatino
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\usepackage[tbtags]{amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{textcomp}
+
+\usepackage[pdftex]{graphicx}
+%\usepackage[pdftex,svgnames]{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{calc}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{wrapfig}
+\usepackage{array} % better tables
+\setlength{\extrarowheight}{3pt} % increase table row height
+%\addtolength{\tabcolsep}{1mm}
+\usepackage{multirow}
+\usepackage{bigstrut}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{siunitx} 
+\usepackage{chemformula}
+\usepackage{upgreek} %%%%%\upalpha \Upalpha
+\definecolor{b1}{RGB}{85,153,255} %\textcolor{b1}{text}
+\definecolor{b2}{RGB}{113, 200, 55}
+\definecolor{b3}{RGB}{55,113,200}
+\definecolor{b4}{RGB}{141,95,211}
+
+\usepackage{bigints, relsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{tcolorbox}
+
+\usepackage{caption}
+\captionsetup{format=hang}
+%\captionsetup{format=hang,font=small}
+
+\usepackage{multicol}
+
+\usepackage[version=3]{mhchem}
+
+\usepackage{textcase}
+
+\RequirePackage{microtype}
+\microtypesetup{expansion=false}
+\DeclareRobustCommand{\spacedallcaps}[1]{\textls[100]{\MakeTextUppercase{#1}}}
+\DeclareRobustCommand{\spacedlowsmallcaps}[1]{\textls[80]{\scshape\MakeTextLowercase{#1}}}
+
+
+% Experiment title: (Edited after taking its definition from article.cls)
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 0em%
+    {\color{b2}\Large \noindent \raggedleft \spacedallcaps \@title \par}%
+  \par
+  \vskip 1.0em  \hrule \vskip 1.0em
+}
+
+
+\usepackage{titlesec}
+% Section headings format:
+% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}[<after-code>]
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+
+% sections
+\titleformat{\section}%
+	{\relax}{\color{b1}\large\thesection}{1em}{\color{b1}\large\spacedlowsmallcaps}
+% subsections
+\titleformat{\subsection}%
+    {\relax}{\large\itshape\thesubsection}{1em}{\large\itshape}
+% subsubsections
+\titleformat{\subsubsection}%
+    {\relax}{\large\textbullet}{1em}{\large\itshape}
+
+% The \section definition in article.cls:
+% \newcommand\section{\@startsection {section}{1}{\z@}%
+%                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
+%                                    {2.3ex \@plus.2ex}%
+%                                    {\normalfont\Large\bfseries}}
+
+% Spacings of the section headings:
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}[<right-sep>]
+% The starred version kills the indentation of the paragraph following the title
+% \titlespacing{\section}{0pt}{3.5ex \@plus 1ex \@minus .2ex}{2.3ex \@plus.2ex}[0pt]
+
+
+\newcommand{\tsup}[1]{$^\text{#1}$}
+\newcommand{\tsub}[1]{$_\text{#1}$}
+\newcommand{\ru}{\rule{0pt}{3ex}}
+
+
+
