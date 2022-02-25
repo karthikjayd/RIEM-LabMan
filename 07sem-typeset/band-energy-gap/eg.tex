@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{../riemlabm}
+\usepackage{fancyhdr}
+\title{Band energy gap of a semiconductor}
+\lfoot{Regional Institute of Education Mysore}
+\lhead{Band energy gap of a semiconductor}
+\chead{}
+\rhead{Semester 7}
+\cfoot{}
+\rfoot{Physics}
+\pagestyle{fancy}
+\begin{document}
+	\maketitle 
+	
+	\section{OBJECTIVE}
+		
+		\begin{enumerate}
+			\item To study the variation of junction voltage with temperature.
+			
+			\item To determine the band energy gap of a semiconductor using a pn junction diode.
+		\end{enumerate}
+	
+	\section{REQUIREMENTS}
+		
+		Electric oven, semiconductor diode (1N4007), thermometer, power supply, voltmeter.
+	
+	\section{THEORY}
+		
+		In a semiconductor, there exists an energy gap between its valence band and conduction band. A certain amount of energy has to be given to the electron so that it can go from the valence band to the conduction band. This energy required is the \textit{energy gap}, $E_G$ of the semiconductor between the two bands.
+		
+		When a pn junction is reverse biased, then the current is due to the minority carriers whose concentration is dependent on the energy gap $E_G$. The reverse current is a function of the temperature of the junction diode.
+		
+		$$V = \dfrac{E_G}{q} - \left[\ln\left(\dfrac{BT^{3}}{I_F}\right)\right]\dfrac{\eta k_{B} T}{q} $$
+		
+		$q$ is the electron charge, $k_B$ is
+		Boltzmann’s constant, $\eta$ is a constant, normally in the range between 1 and 2,
+		and $T$ is the absolute temperature of the p-n junction.
+		
+		For a definite value of $I$, the logarithmic term in the above equation can be considered constant, and the voltage $V$ is a linear function of $T$. From a family of $I-V$ characteristics obtained, one can find voltages related to a constant current I for different temperatures. According to the equation, the plot of the voltage $V$ versus the temperature $T$ should be a straight line. Extrapolation of this line to a zero temperature gives the bandgap energy $E_G$. 
+		
+		The experiment is carried out by measuring the voltage across a semiconductor diode by varying the temperature of the diode. The circuit diagram is given below.
+		
+	\section{\textcolor{b1}{PROCEDURE}}
+		
+		\begin{enumerate}
+			
+			\begin{figure}[!htb]
+				\centering
+				\includegraphics[scale=0.8]{Eg-circuit.pdf}
+				\caption{Circuit Diagram}
+			\end{figure}
+			
+			\item Connect the circuit as shown in figure 1. The circuit is almost identical to the I-V characteristics of diode experiment. Note that the diode should be connected in \textit{reverse bias}. The only addition is that the diode is kept in an electric oven for controlling the temperature of the diode.
+			
+			\item Insert the thermometer into the oven in which the diode is kept. Note down the room temperature and the corresponding voltage across the diode.
+			
+			\item Switch on the oven and let the temperature of the oven rise. With increase in temperature, note down the voltage across the diode for every $5\degree$ C rise in temperature. (Make sure that the current is constant at around $100\ \mu A$)
+			
+			\item As the temperature reaches about $80\degree$ C, turn off the oven and let the temperature fall. Continue noting the voltage readings for the same temperature values taken for heating and find the mean voltage.
+			
+			\item  Plot a graph of temperature (in kelvin) versus mean voltage (in volts).
+			
+		\end{enumerate}
+	
+	\section{\textcolor{b1}{OBSERVATIONS}}
+		
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\multicolumn{5}{|c|}{Constant current $I= \rule{20ex}{0.2pt}$}\\ \hline
+			\rowcolor{b1!25}Temperature&  Temperature&  \multicolumn{2}{c|}{Voltage $(V)$}&  Mean\\ \cline{3-4}  
+			\rowcolor{b1!25}(in $\degree$ C)&  (in K)&  Heating&  Cooling&  voltage (V)\\ \hline
+			
+			$25$ &$25+273=298$ &&&\\ \hline
+			$30$ &&&&\\ \hline
+			$35$&&&&\\ \hline
+			$40$&&&&\\ \hline
+			$45$&&&&\\ \hline
+			$50$&&&&\\ \hline
+			$55$&&&&\\ \hline
+			$60$&&&&\\ \hline
+			$65$&&&&\\ \hline
+			$70$&&&&\\ \hline
+			$75$&&&&\\ \hline
+		\end{tabular}
+		\vspace{10pt}\\
+		Constant current $I = \rule{10ex}{0.2pt}$
+		
+		\newpage
+		
+		\section{\textcolor{b1}{CALCULATIONS}}
+			
+			\begin{figure}[!htb]
+				\centering
+				\includegraphics[scale=0.7]{print.pdf}
+				\caption{Sample graph plotted in gnuplot}
+			\end{figure}
+			
+			The slope of the temperature ($T$) v/s junction voltage ($V$) plot gives a straight line with a negative slope as shown in figure 2.
+			
+			Using the straight line equation 
+			
+			$$y=mx+c$$
+			
+			The y-intercept $c$ of the straight line gives the value of $E_G$ in electron volts.
+			
+			
+			\section{\textcolor{b1}{RESULT}}
+			
+			\begin{enumerate}
+				\item	The junction voltage is found to \textit{decrease linearly} with temperature.
+				
+				\item	The band energy gap of the given semiconductor is determined to be \rule{10ex}{0.2pt}$eV$.
+				
+			\end{enumerate}
+			
+\end{document}
