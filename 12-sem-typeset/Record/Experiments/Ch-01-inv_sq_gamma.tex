@@ -1,0 +1,88 @@
+%\documentclass[12pt]{report}
+%\author{Karthik J, Navya Jose}
+%\date{}
+%\usepackage{../sem12-lab-record}
+\lhead{Date: 19/07/2021}
+\begin{document}
+	
+	%\maketitle
+	
+	\chapter{Inverse Square Law (Gamma-radiation)}
+	\vspace{-1cm}
+	\dateofexp{Date of Experiment: 19/07/2021} 
+	% To display date in contents page
+	%
+	\begin{center}% To display date in the experiment page
+		Date of Experiment: 19/07/2021
+	\end{center}
+	\section{Aim}
+	To verify inverse square law for gamma rays using GM counter.
+	
+	\section{Requirements}
+	\begin{itemize}
+		\item 	GM counter
+		\item 	$ ^{137} $Cs as gamma source
+	\end{itemize}
+	
+	\section{Theory}
+	Any point source which spreads its influence equally in all directions, without a limit to its range, will obey the inverse square law. The intensity of the influence at any given radius $ r $ is equal to the source power divided by the area of the sphere. This comes strictly from geometrical considerations. As such, it applies to diverse phenomena. Point sources of light, sound and radiation obey the inverse square law.
+	
+	The theory therefore indicates that if a source emits gamma radiation equally in all directions and not absorbed by the material it passes through, then the intensity of radiation decreases with distance according to the inverse square law,
+	\begin{equation}{\label{eqn:inv-sq-law}}
+		I(r) \propto \dfrac{1}{r^2}
+	\end{equation}
+	
+	where, $ I(r) $ is the intensity of gamma radiation at $ r $ from the source. 
+	
+	Now, the number of counts $ N $ is proportional to the intensity of gamma radiation from the source. So the above equation \ref{eqn:inv-sq-law} can be written as
+	\begin{equation}{\label{eqn:inv-sq-law-N}}
+		N(r) \propto \dfrac{1}{r^2}
+	\end{equation}
+
+	Taking natural logarithms on both sides of the above equation, we get
+	\begin{equation}{\label{eqn:log-eqn}}
+		\ln N = \ln k - 2\ln r
+	\end{equation}
+	
+	From the plot of $ \ln N $ versus $ \ln r $, if the slope turns out to be $ -2 $, the inverse square law gets verified.
+	
+	\section{Procedure}
+	
+	\begin{enumerate}
+		\item 	 Setup the Geiger Mueller Tube and counter. Set the voltage of the GM tube to its optimal operating voltage, which should be around 450 volts.
+		\item 	 First do a run without a radioactive source to determine your background counts $ N_b $.
+		\item 	 From the preset menu, set Preset Time (\texttt{PT}) to 60 seconds. Do three trials and record the count in each case. Calculate the average background count by dividing the total number of count by three. This is the background count $ N_b $. Record it on your data page. Take the background count initially and at the end of the experiment.
+		\item  	Using the long tweezers pick the gamma source $ ^{137} $Cs and place it at some chosen distance.
+		\item 	With the detector and the source both in place, note down the count collected for 60 seconds. Take two trials and record the count.
+		\item  Repeat the above step for 11 different distances.
+		\item 	Now remove the source and do a run to determine the final background counts for 60 seconds.
+		\item 	Record all the distances $ r $ and the corresponding count rates $ N_i $ in an appropriate table (table \ref{tab:inv-sq-g-obs}).
+		\item 	Calculate the corrected count rates at the different distances by subtracting the average background count rate from actual value. 
+		\begin{equation}\label{eqn:background-count}
+			N = N_i - N_b
+		\end{equation}
+		Record these values of the corrected count rates in the table \ref{tab:inv-sq-g-obs}.
+		\item 	Calculate $ \ln N $ and $ \ln r $ from the table and plot graph of $ \ln N $ v/s $ \ln r $. Using least square method draw the best fit line for the above set of points. If all the points more or less are found to be on or near the straight line then the inverse square law is verified. Determine the slope and show that it is nearly equal to $ -2 $. This also verifies the inverse square law.
+		
+	\end{enumerate}
+	
+	\section{Observations \& Graph}
+	
+%	The observations are tabulated in the table \ref{tab:inv-sq-g-obs}. The obtained plot of $ \ln N $ versus $ \ln r $ for the experimental data is given in figure \ref{fig:lnN-lnr}.\vspace{0.3cm}\\
+%		Background counts, $ N_b = 37 $ ; Operating Voltage = \SI{450}{\volt}
+
+		%
+%	The plot of $ \ln N $ versus $ \ln r $ is shown in figure \ref{fig:plot}.
+%	\begin{figure}[!htb]
+%		\centering
+%		\includegraphics[width=0.8\textwidth]{./Experiments/1201-plot.png}
+%		\caption{Plot of $\ln N$ versus $ \ln d $ }
+%		\label{fig:plot}
+%	\end{figure}
+	
+	\section{Result}
+	Inverse square law has been verified for gamma particles.
+	
+%	\section{References}
+	
+\end{document}

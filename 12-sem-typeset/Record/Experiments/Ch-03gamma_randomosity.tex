@@ -1,0 +1,234 @@
+%\documentclass[12pt]{report}
+%\author{Gayathri Raveendran,Preeti Priya Mohanty}
+%\date{}
+%\usepackage{../sem12-lab-record}
+\lhead{Date: 22/07/2021}  % For date in header
+
+% REMOVE the % sign in the above lines if you want to
+% compile this experiment file separately.
+
+\begin{document}
+	
+	\chapter{Randomosity of Gamma Emission} % Replace the text with the title of the experiment
+	\vspace{-1cm}
+	\dateofexp{Date of Experiment: 22/07/2021} 
+	% To display date in contents page
+	
+	\begin{center}% To display date of experiment in the title
+		Date of Experiment: 22/07/2021
+	\end{center}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% THE EXPERIMENT STARTS HERE %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Aim}
+	\begin{itemize}
+		
+		\item To study the randomness of Gamma emission.
+		\item To verify that the obtained distribution is Gaussian.
+	\end{itemize}
+	
+	\section{Requirements}
+	\begin{itemize}
+		\item 	Geiger M{\"u}ller Counter
+		\item 	$ ^{137} $Cs as gamma source
+	\end{itemize}
+	
+	\section{Theory}
+	The radioactive decay is a random process. Consequently any measurement based on observing the radiation emitted in a nuclear decay is subject to some degree of statistical fluctuations although each measurement for a radioactive sample is independent of all previous measurements. The deviation of the individual count rates from the average count rate behaves in a predictable manner. If we observe a given radioactive nucleus for a time t and define the success as the nuclide decays during the process, then the probability of success $ p $ is given by, 
+	\begin{equation} 
+		p = 1-e^{-\lambda t}
+	\end{equation}  where $\lambda$ is the decay constant. \\
+	
+	Assume that there is a collection of $ N $ independent measurements of the same physical quantity. If each of these $ N $ measurements is denoted
+	as $x_{1}, x_{2}, \ldots , x_{N}$, the experimental mean is given by,
+	\begin{equation}{\label{eqn:mean}}
+		\bar{x}=\sum\limits_{i=1}^{N}\dfrac{x_i}{N}
+	\end{equation}
+	The probability $p(x)$ of observing $x$ counts (events) in a fixed time interval is described by Poisson distribution.
+	
+	
+	For normal distribution, total probability is one. When the mean is large ($\bar{x}$ is greater than 30), then Poisson distribution transforms into a Gaussian distribution as:
+	\begin{equation}{\label{eqn:stdev}}
+		p(x)=\dfrac{1}{\sigma\sqrt{2 \pi}} e^{\nicefrac{-(x-\bar{x})^2}{2 \sigma^2}}
+	\end{equation}
+	The standard deviation $\sigma^2 = (\overline{x^2}) - (\bar{x})^2$.
+	
+	\section{Procedure}
+	\begin{enumerate}
+		\item 	 Setup the Geiger Mueller Tube and counter. Set the voltage of the GM tube to its optimal operating voltage, which should be around \SI{450}{\volt}.
+		\item 	  Don't put any source in the counter. Also remove all the sources in the vicinity of the counter. Take three independent readings of the background counts for a pre-set time of 30 seconds.
+		\item  Set the time for 30 seconds. Start the counting system and note down counts at the end of every 30s continuously for $N=50$ trials.
+		
+		\item Find the maximum \& minimum count and form class intervals. Find the frequency of each class interval. Calculate the probability of each class interval by dividing the frequency of each class interval by 50.
+		
+		\item 	Plot the Probability versus class interval as a histogram.
+		
+		\item 	Determine the standard deviation of the counts obtained and plot the Gaussian function in equation using the data \& the standard deviation. Verify that the nature of the two graphs are same.
+		
+	\end{enumerate}
+	\clearpage
+	\section{Observations \& Graph}
+	% Please add the following required packages to your document preamble:
+	% \usepackage[table,xcdraw]{xcolor}
+	% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+	% \usepackage{longtable}
+	% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+	\begin{longtable}{|l|r|r|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		{\color[HTML]{000000} Class Interval}  & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\color[HTML]{000000} Frequency}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}{\color[HTML]{000000} Probability}} \\ \hline
+		\endfirsthead
+		%
+		\endhead
+		%
+		{\color[HTML]{000000} $ 2585 - 2590 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2590 - 2595 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2595 - 2600 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2600 - 2605 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2605 - 2610 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2610 - 2615 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2615 - 2620 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2620 - 2625 $} & {\color[HTML]{000000} 2}                                                      & {\color[HTML]{000000} 0.04}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2625 - 2630 $} & {\color[HTML]{000000} 3}                                                      & {\color[HTML]{000000} 0.06}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2630 - 2635 $} & {\color[HTML]{000000} 2}                                                      & {\color[HTML]{000000} 0.04}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2635 - 2640 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2640 - 2645 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2645 - 2650 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2650 - 2655 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2655 - 2660 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2660 - 2665 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2665 - 2670 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2670 - 2675 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2675 - 2680 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2680 - 2685 $} & {\color[HTML]{000000} 2}                                                      & {\color[HTML]{000000} 0.04}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2685 - 2690 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2690 - 2695 $} & {\color[HTML]{000000} 4}                                                      & {\color[HTML]{000000} 0.08}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2695 - 2700 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2700 - 2705 $} & {\color[HTML]{000000} 4}                                                      & {\color[HTML]{000000} 0.08}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2705 - 2710 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2710 - 2715 $} & {\color[HTML]{000000} 2}                                                      & {\color[HTML]{000000} 0.04}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2715 - 2720 $} & {\color[HTML]{000000} 4}                                                      & {\color[HTML]{000000} 0.08}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2720 - 2725 $} & {\color[HTML]{000000} 3}                                                      & {\color[HTML]{000000} 0.06}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2725 - 2730 $} & {\color[HTML]{000000} 2}                                                      & {\color[HTML]{000000} 0.04}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2730 - 2735 $} & {\color[HTML]{000000} 2}                                                      & {\color[HTML]{000000} 0.04}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2735 - 2740 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2740 - 2745 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2745 - 2750 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2750 - 2755 $} & {\color[HTML]{000000} 3}                                                      & {\color[HTML]{000000} 0.06}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2755 - 2760 $} & {\color[HTML]{000000} 2}                                                      & {\color[HTML]{000000} 0.04}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2760 - 2765 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2765 - 2770 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2770 - 2775 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2775 - 2780 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2780 - 2785 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2785 - 2790 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2790 - 2795 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2795 - 2800 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2800 - 2805 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2805 - 2810 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2810 - 2815 $} & {\color[HTML]{000000} 0}                                                      & {\color[HTML]{000000} 0.00}                                                     \\ \hline
+		{\color[HTML]{000000} $ 2815 - 2820 $} & {\color[HTML]{000000} 1}                                                      & {\color[HTML]{000000} 0.02}                                                     \\ \hline
+		\caption{}
+		\label{tab:Frequency}\\
+	\end{longtable}
+	
+	Experimental mean, $\bar{x}=2693 $
+	Standard Deviation, $\sigma=49.978 $
+	
+	\begin{longtable}{|r|r|r|r|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Count \\ $x$\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$x - \bar{x}$} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$(x - \bar{x})^2$} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}$p (x)$ \\ ($\times 10^{-3}$)\end{tabular}} \\ \hline
+		2711                                                                                               & 18                                                     & 324                                                             & 74.940                                                                                                               \\ \hline
+		2754                                                                                               & 61                                                     & 3721                                                            & 38.123                                                                                                               \\ \hline
+		2725                                                                                               & 32                                                     & 1024                                                            & 65.229                                                                                                               \\ \hline
+		2754                                                                                               & 61                                                     & 3721                                                            & 38.123                                                                                                               \\ \hline
+		2696                                                                                               & 3                                                      & 9                                                               & 79.702                                                                                                               \\ \hline
+		2651                                                                                               & -42                                                    & 1764                                                            & 55.850                                                                                                               \\ \hline
+		2704                                                                                               & 11                                                     & 121                                                             & 77.995                                                                                                               \\ \hline
+		2726                                                                                               & 33                                                     & 1089                                                            & 64.392                                                                                                               \\ \hline
+		2719                                                                                               & 26                                                     & 676                                                             & 69.895                                                                                                               \\ \hline
+		2631                                                                                               & -62                                                    & 3844                                                            & 36.759                                                                                                               \\ \hline
+		2716                                                                                               & 23                                                     & 529                                                             & 71.961                                                                                                               \\ \hline
+		2630                                                                                               & -63                                                    & 3969                                                            & 35.847                                                                                                               \\ \hline
+		2604                                                                                               & -89                                                    & 7921                                                            & 16.210                                                                                                               \\ \hline
+		2587                                                                                               & -106                                                   & 11236                                                           & 8.335                                                                                                                \\ \hline
+		2724                                                                                               & 31                                                     & 961                                                             & 66.051                                                                                                               \\ \hline
+		2615                                                                                               & -78                                                    & 6084                                                            & 23.440                                                                                                               \\ \hline
+		2640                                                                                               & -53                                                    & 2809                                                            & 45.260                                                                                                               \\ \hline
+		2703                                                                                               & 10                                                     & 100                                                             & 78.316                                                                                                               \\ \hline
+		2625                                                                                               & -68                                                    & 4624                                                            & 31.427                                                                                                               \\ \hline
+		2630                                                                                               & -63                                                    & 3969                                                            & 35.847                                                                                                               \\ \hline
+		2625                                                                                               & -68                                                    & 4624                                                            & 31.427                                                                                                               \\ \hline
+		2709                                                                                               & 16                                                     & 256                                                             & 75.952                                                                                                               \\ \hline
+		2694                                                                                               & 1                                                      & 1                                                               & 79.815                                                                                                               \\ \hline
+		2630                                                                                               & -63                                                    & 3969                                                            & 35.847                                                                                                               \\ \hline
+		2720                                                                                               & 27                                                     & 729                                                             & 69.164                                                                                                               \\ \hline
+		2690                                                                                               & -3                                                     & 9                                                               & 79.656                                                                                                               \\ \hline
+		2758                                                                                               & 65                                                     & 4225                                                            & 34.477                                                                                                               \\ \hline
+		2754                                                                                               & 61                                                     & 3721                                                            & 38.123                                                                                                               \\ \hline
+		2670                                                                                               & -23                                                    & 529                                                             & 71.644                                                                                                               \\ \hline
+		2720                                                                                               & 27                                                     & 729                                                             & 69.164                                                                                                               \\ \hline
+		2695                                                                                               & 2                                                      & 4                                                               & 79.774                                                                                                               \\ \hline
+		2746                                                                                               & 53                                                     & 2809                                                            & 45.723                                                                                                               \\ \hline
+		2682                                                                                               & -11                                                    & 121                                                             & 77.831                                                                                                               \\ \hline
+		2728                                                                                               & 35                                                     & 1225                                                            & 62.675                                                                                                               \\ \hline
+		2816                                                                                               & 123                                                    & 15129                                                           & 3.908                                                                                                                \\ \hline
+		2724                                                                                               & 31                                                     & 961                                                             & 66.051                                                                                                               \\ \hline
+		2632                                                                                               & -61                                                    & 3721                                                            & 37.678                                                                                                               \\ \hline
+		2732                                                                                               & 39                                                     & 1521                                                            & 59.092                                                                                                               \\ \hline
+		2758                                                                                               & 65                                                     & 4225                                                            & 34.477                                                                                                               \\ \hline
+		2703                                                                                               & 10                                                     & 100                                                             & 78.316                                                                                                               \\ \hline
+		2695                                                                                               & 2                                                      & 4                                                               & 79.774                                                                                                               \\ \hline
+		2715                                                                                               & 22                                                     & 484                                                             & 72.605                                                                                                               \\ \hline
+		2761                                                                                               & 68                                                     & 4624                                                            & 31.840                                                                                                               \\ \hline
+		2704                                                                                               & 11                                                     & 121                                                             & 77.995                                                                                                               \\ \hline
+		2695                                                                                               & 2                                                      & 4                                                               & 79.774                                                                                                               \\ \hline
+		2683                                                                                               & -10                                                    & 100                                                             & 78.166                                                                                                               \\ \hline
+		2734                                                                                               & 41                                                     & 1681                                                            & 57.240                                                                                                               \\ \hline
+		2663                                                                                               & -30                                                    & 900                                                             & 66.471                                                                                                               \\ \hline
+		2610                                                                                               & -83                                                    & 6889                                                            & 19.942                                                                                                               \\ \hline
+		2671                                                                                               & -22                                                    & 484                                                             & 72.299                                                                                                               \\ \hline
+		\caption{}
+		\label{tab:gauss}
+	\end{longtable}
+	%
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+%			\pgfplotsset{set layers}
+			\begin{axis}[xlabel={Count classes}, 
+				ylabel={Probability},set layers,
+				ymin=0,width=0.8\linewidth,
+				grid]
+				\addplot+[ybar interval,mark=no,fill=blue!20,draw=black,line width=1pt] 
+				table[x=Count,y=Prob,col sep=comma]{1203-data.csv};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Histogram of Probability versus Class intervals (of size 5)}
+	\end{figure}
+%
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.6\textwidth,
+			thick,
+			grid=both,ymin = 0]
+			
+%			\addplot[blue,domain=-5:5] {exp(-0.5*(((x-2693)/49.978)^2))};
+			\addplot[blue,domain=2493:2893,smooth,samples=1000] { (1/(49.978*sqrt(2*pi)))*exp(-(((x-2693)^2)/(2*(49.978)^2))) };
+		\end{axis}
+	\end{tikzpicture}
+\caption{Plot of Gaussian function corresponding to the counts in table\ref{tab:gauss}; $ \bar{x} = 2693 $ and $ \sigma = 49.978 $}
+\end{figure}
+	
+	\section{Result}
+	
+	The randomness of Gamma emission is studied and obtained distribution is Gaussian in nature. 
+	\clearpage
+	
+	%	\section{References}
+	
+\end{document}

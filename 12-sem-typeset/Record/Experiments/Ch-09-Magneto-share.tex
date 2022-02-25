@@ -1,0 +1,128 @@
+\lhead{Date: 27/07/2021}  % For date in header
+
+% REMOVE the % sign in the above lines if you want to
+% compile this experiment file separately.
+
+\begin{document}
+	
+	\chapter{Magnetoresistance} % Replace the text with the title of the experiment
+	\vspace{-1cm}
+	\dateofexp{Date of Experiment: 27/07/2021} 
+	% To display date in contents page
+	
+	\begin{center}% To display date of experiment in the title
+		Date of Experiment: 27/07/2021
+	\end{center}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% THE EXPERIMENT STARTS HERE %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Aim}
+	To study the magnetic field dependence of magnetoresistance of a given semiconductor sample (Germanium).
+	
+	\section{Requirements}
+	\begin{itemize}
+		\item 	Hall probe (Ge sample)
+		\item 	Electromagnets
+		\item 	Digital flux / gauss meter
+		\item 	Constant current source
+	\end{itemize}
+	
+	\section{Theory}
+	Magnetoresistance is defined as ratio of change in resistance of a substance due to application of magnetic field to its resistance in zero field. Under the high influence of the magnetic field, the electrons in a solid metal material don't follow the exact direction of superimposed electric field, instead, take a curved path. This results in effective decrease of mean free path and hence an increase in resistivity of sample. When magnetic field is applied normal to current flow, the effect is termed as \emph{transverse magnetoresistance} and when field is applied parallel to current flow, it is termed as \emph{longitudinal magnetoresistance}.
+	
+	For small fields:
+	\begin{equation}{\label{eqn:H2}}
+		H^2 \propto \dfrac{\Delta \rho}{\rho_0} = \dfrac{\rho-\rho_0}{\rho_0}
+	\end{equation}
+	or,
+	\begin{equation}{\label{eqn:H2-prop}}
+		\dfrac{\Delta R}{R_0} \propto H^2
+	\end{equation}
+	%
+	where $ \rho_0 $ is the resistivity of the material in zero field, $ \rho $ is the resistivity of the material in field $ H $ ; $ R_0 $ and $ R $ are corresponding resistances.
+	
+\section{Procedure}
+
+\subsection{Calibration of applied magnetic field $ H $:}
+\label{subs:calib}
+
+\begin{enumerate}
+	\item 	Adjust the air gap between the pole pieces of the electromagnet.
+	and keep the probe of the gauss meter in between the pole pieces.
+	
+	\item 	Set the current source to zero current, and the gauss meter to zero reading.
+	
+	\item	Increase the current in steps of \SI{0.5}{\ampere} till \SI{4.5}{\ampere}, and measure the corresponding flux (Table \ref{tab:calibration}).
+	
+	\item 	Plot a graph of $ H $(\si{\kilo G}) versus $ I $(\si{\ampere}) for calibration.
+\end{enumerate}
+
+\subsection{Data for Magnetoresistance of Ge}
+\label{subs:data}
+
+\begin{enumerate}
+	\item 	Remove the probe placed in between the pole pieces and replace it with the Hall probe (Germanium sample). 
+	
+	\item	Connect the yellow \& green wires of the Hall probe to the output current in the constant current power supply and the red \& black wires to the input of the same. 
+	
+	\item 	Set the constant current $ I_c $ to about \SI{2.7}{\milli\ampere}.
+	
+	\item 	Switch on the electromagnet and set it to zero current.
+	
+	\item 	Increase the current in steps of \SI{0.5}{\ampere} such that it matches the values of $ I $ in table \ref{tab:calibration} and note down the corresponding voltages $ V $ (\si{\milli\volt}) in table \ref{tab:magneto}.
+	
+	\item 	Calculate the resistances corresponding to the observed voltages $ V $, using $ R = \nicefrac{V}{I_c} $, where $ I_c $ is the constant current. (Tabulate in table \ref{tab:magneto}.)
+	
+	\item 	Plot a graph of $ \dfrac{\Delta R}{R_0} $ versus $ H $ (kG), and a graph of $ \log_{10}\left(\dfrac{\Delta R}{R_0}\right) $ versus $ \log_{10} H $.
+\end{enumerate}
+
+\section{Observations \& Graph}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|r|r|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Current\\ $ I $ (A)\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Magnetic field\\ $ H $ (kG)\end{tabular}} \\ \hline
+		0.00                                                                                                  & 0.00                                                                                                         \\ \hline
+		0.51                                                                                                  & 1.32                                                                                                         \\ \hline
+		1.01                                                                                                  & 2.76                                                                                                         \\ \hline
+		1.50                                                                                                  & 4.25                                                                                                         \\ \hline
+		2.01                                                                                                  & 5.75                                                                                                         \\ \hline
+		2.50                                                                                                  & 7.10                                                                                                         \\ \hline
+		3.00                                                                                                  & 8.42                                                                                                         \\ \hline
+		3.50                                                                                                  & 9.65                                                                                                         \\ \hline
+		4.01                                                                                                  & 10.93                                                                                                        \\ \hline
+		4.50                                                                                                  & 12.12                                                                                                        \\ \hline
+	\end{tabular}
+	\caption{Calibration of applied magnetic field $ H $}
+	\label{tab:calibration}
+\end{table}
+%
+%
+\begin{table}[H]
+	\begin{tabular}{|r|r|r|r|r|r|r|r|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Current\\ $ I $ (A)\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Magnetic Field\\ $ H $ (kG)\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ \ln H $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Voltage\\ $ V_m $ (mV)\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}$ R_m $\\ ($ \Omega $)\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ \Delta R $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ \dfrac{\Delta R}{R_0} $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ \ln \left( \dfrac{\Delta R}{R_0} \right) $} \\ \hline
+		0.00                                                                                                  & 0.00                                                                                                         & \multicolumn{1}{l|}{}                             & 130                                                                                                    & 48.327                                                                                          & 0.000                                                & 0.000                                                    & \multicolumn{1}{l|}{}                                 \\ \hline
+		0.51                                                                                                  & 1.32                                                                                                         & 0.121                                             & 142                                                                                                    & 52.788                                                                                          & 4.461                                                & 0.092                                                    & -1.035                                                \\ \hline
+		1.01                                                                                                  & 2.76                                                                                                         & 0.441                                             & 156                                                                                                    & 57.993                                                                                          & 9.665                                                & 0.200                                                    & -0.699                                                \\ \hline
+		1.50                                                                                                  & 4.25                                                                                                         & 0.628                                             & 167                                                                                                    & 62.082                                                                                          & 13.755                                               & 0.285                                                    & -0.546                                                \\ \hline
+		2.01                                                                                                  & 5.75                                                                                                         & 0.760                                             & 178                                                                                                    & 66.171                                                                                          & 17.844                                               & 0.369                                                    & -0.433                                                \\ \hline
+		2.50                                                                                                  & 7.10                                                                                                         & 0.851                                             & 188                                                                                                    & 69.888                                                                                          & 21.561                                               & 0.446                                                    & -0.351                                                \\ \hline
+		3.00                                                                                                  & 8.42                                                                                                         & 0.925                                             & 196                                                                                                    & 72.862                                                                                          & 24.535                                               & 0.508                                                    & -0.294                                                \\ \hline
+		3.50                                                                                                  & 9.65                                                                                                         & 0.985                                             & 204                                                                                                    & 75.836                                                                                          & 27.509                                               & 0.569                                                    & -0.245                                                \\ \hline
+		4.01                                                                                                  & 10.93                                                                                                        & 1.039                                             & 211                                                                                                    & 78.439                                                                                          & 30.112                                               & 0.623                                                    & -0.205                                                \\ \hline
+		4.50                                                                                                  & 12.12                                                                                                        & 1.084                                             & 217                                                                                                    & 80.669                                                                                          & 32.342                                               & 0.669                                                    & -0.174                                                \\ \hline
+	\end{tabular}
+	\caption{Data for Magnetoresistance of Ge}
+	\label{tab:magneto}
+\end{table}
+
+\section{Result}
+The magnetic dependence of magnetoresistance of a semiconductor is studied successfully.
+
+\end{document}

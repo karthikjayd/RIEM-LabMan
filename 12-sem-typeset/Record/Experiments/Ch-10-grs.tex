@@ -1,0 +1,148 @@
+\lhead{Date: 30/07/2021}  % For date in header
+
+% REMOVE the % sign in the above lines if you want to
+% compile this experiment file separately.
+
+\begin{document}
+	
+	\chapter{Gamma Ray Spectrometer} % Replace the text with the title of the experiment
+	\vspace{-1cm}
+	\dateofexp{Date of Experiment: 30/07/2021} 
+	% To display date in contents page
+	
+	\begin{center}% To display date of experiment in the title
+		Date of Experiment: 30/07/2021
+	\end{center}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% THE EXPERIMENT STARTS HERE %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Aim}
+	To calibrate a Gamma Ray Spectrometer.
+	
+	\section{Requirements}
+	\begin{itemize}
+		\item	Gamma source Sodium $ ^{22} $Na
+		\item 	Gamma ray spectrometer
+	\end{itemize}
+	
+	\section{Theory}
+	In this experiment, we will study the radioactive decay of a nucleus by detecting gamma rays emitted consequent to the decay. Gamma ray detection is a multi-step process. It is possible to use GM counters for the detection of gamma radiation and for this purpose, the windowless tube is used. 
+	
+	Efficiency is just $ 1\% $ because of low gamma interaction of photon radiation with the material in the tube wall normally 1-2 mm of chrome steel, for producing electrons that can enter and ionize the gas. This is essential as there is a low gas density in the tube, and most high energy gamma photons pass through without being detected. 
+		
+\section{Procedure}
+	
+	\begin{enumerate}
+		\item 	The given source is kept above the detector.
+		\item 	The counter is set for 20 seconds, and voltage at zero counts are noted.
+		
+		\item 	Now vary the voltage by 50 and take the counts till \SI{350}{\volt}. Take two trials for each voltage.
+		
+		\item 	After \SI{350}{\volt}, increase the voltage in steps of \SI{10}{\volt} till about \SI{800}{\volt} and note the counts. Take two trials for each case.
+		
+		\item 	A graph of counts against voltage is plotted (figure \ref{fig:grs-plot}) and the gamma ray spectrometer is calibrated.
+		
+	\end{enumerate}		
+
+
+\section{Observations \& Graph}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+	\begin{longtable}{|r|r|r|r|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}}                                                                        & \multicolumn{2}{c|}{\cellcolor[HTML]{EFEFEF}Counts}                                                         & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}}                                                                          \\ \cline{2-3}
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Voltage\\ (V)\end{tabular}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Trial 1} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Trial 2} & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Average\\ Count\end{tabular}}} \\ \hline
+		0                                                                                                                     & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		50                                                                                                                    & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		100                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		150                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		200                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		250                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		300                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		350                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		360                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		370                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		380                                                                                                                   & 0                                                    & 0                                                    & 0.00                                                                                                                   \\ \hline
+		390                                                                                                                   & 2                                                    & 0                                                    & 1.00                                                                                                                   \\ \hline
+		400                                                                                                                   & 11                                                   & 16                                                   & 13.50                                                                                                                  \\ \hline
+		410                                                                                                                   & 157                                                  & 145                                                  & 151.00                                                                                                                 \\ \hline
+		420                                                                                                                   & 328                                                  & 331                                                  & 329.50                                                                                                                 \\ \hline
+		430                                                                                                                   & 767                                                  & 781                                                  & 774.00                                                                                                                 \\ \hline
+		440                                                                                                                   & 1,027                                                & 924                                                  & 975.50                                                                                                                 \\ \hline
+		450                                                                                                                   & 820                                                  & 832                                                  & 826.00                                                                                                                 \\ \hline
+		460                                                                                                                   & 746                                                  & 759                                                  & 752.50                                                                                                                 \\ \hline
+		470                                                                                                                   & 1,496                                                & 1,434                                                & 1,465.00                                                                                                               \\ \hline
+		480                                                                                                                   & 2,032                                                & 2,153                                                & 2,092.50                                                                                                               \\ \hline
+		490                                                                                                                   & 4,851                                                & 4,999                                                & 4,925.00                                                                                                               \\ \hline
+		500                                                                                                                   & 3,980                                                & 3,900                                                & 3,940.00                                                                                                               \\ \hline
+		510                                                                                                                   & 1,421                                                & 1,482                                                & 1,451.50                                                                                                               \\ \hline
+		520                                                                                                                   & 1,357                                                & 1,340                                                & 1,348.50                                                                                                               \\ \hline
+		530                                                                                                                   & 1,651                                                & 1,651                                                & 1,651.00                                                                                                               \\ \hline
+		540                                                                                                                   & 1,713                                                & 1,739                                                & 1,726.00                                                                                                               \\ \hline
+		550                                                                                                                   & 1,594                                                & 1,622                                                & 1,608.00                                                                                                               \\ \hline
+		560                                                                                                                   & 1,657                                                & 1,768                                                & 1,712.50                                                                                                               \\ \hline
+		570                                                                                                                   & 1,598                                                & 1,618                                                & 1,608.00                                                                                                               \\ \hline
+		580                                                                                                                   & 1,506                                                & 1,448                                                & 1,477.00                                                                                                               \\ \hline
+		590                                                                                                                   & 1,298                                                & 1,258                                                & 1,278.00                                                                                                               \\ \hline
+		600                                                                                                                   & 1,174                                                & 1,118                                                & 1,146.00                                                                                                               \\ \hline
+		610                                                                                                                   & 1,062                                                & 1,052                                                & 1,057.00                                                                                                               \\ \hline
+		620                                                                                                                   & 1,034                                                & 975                                                  & 1,004.50                                                                                                               \\ \hline
+		630                                                                                                                   & 907                                                  & 958                                                  & 932.50                                                                                                                 \\ \hline
+		640                                                                                                                   & 940                                                  & 821                                                  & 880.50                                                                                                                 \\ \hline
+		650                                                                                                                   & 710                                                  & 705                                                  & 707.50                                                                                                                 \\ \hline
+		660                                                                                                                   & 979                                                  & 951                                                  & 965.00                                                                                                                 \\ \hline
+		670                                                                                                                   & 1,312                                                & 1,370                                                & 1,341.00                                                                                                               \\ \hline
+		680                                                                                                                   & 2,242                                                & 2,251                                                & 2,246.50                                                                                                               \\ \hline
+		690                                                                                                                   & 4,382                                                & 4,388                                                & 4,385.00                                                                                                               \\ \hline
+		700                                                                                                                   & 5,166                                                & 4,990                                                & 5,078.00                                                                                                               \\ \hline
+		710                                                                                                                   & 7,433                                                & 7,946                                                & 7,689.50                                                                                                               \\ \hline
+		720                                                                                                                   & 13,469                                               & 13,097                                               & 13,283.00                                                                                                              \\ \hline
+		730                                                                                                                   & 14,587                                               & 14,523                                               & 14,555.00                                                                                                              \\ \hline
+		740                                                                                                                   & 15,043                                               & 14,797                                               & 14,920.00                                                                                                              \\ \hline
+		750                                                                                                                   & 14,640                                               & 14,563                                               & 14,601.50                                                                                                              \\ \hline
+		760                                                                                                                   & 15,880                                               & 15,869                                               & 15,874.50                                                                                                              \\ \hline
+		770                                                                                                                   & 17,952                                               & 17,981                                               & 17,966.50                                                                                                              \\ \hline
+		780                                                                                                                   & 19,658                                               & 19,230                                               & 19,444.00                                                                                                              \\ \hline
+		790                                                                                                                   & 21,717                                               & 21,886                                               & 21,801.50                                                                                                              \\ \hline
+		800                                                                                                                   & 25,845                                               & 21,330                                               & 23,587.50                                                                                                              \\ \hline
+		810                                                                                                                   & 29,582                                               & 29,906                                               & 29,744.00                                                                                                              \\ \hline
+		820                                                                                                                   & 28,287                                               & 27,377                                               & 27,832.00                                                                                                              \\ \hline
+		830                                                                                                                   & 31,485                                               & 31,046                                               & 31,265.50                                                                                                              \\ \hline
+		840                                                                                                                   & 36,041                                               & 36,057                                               & 36,049.00                                                                                                              \\ \hline
+		850                                                                                                                   & 42,101                                               & 42,703                                               & 42,402.00                                                                                                              \\ \hline
+		860                                                                                                                   & 50,697                                               & 51,069                                               & 50,883.00                                                                                                              \\ \hline
+		870                                                                                                                   & 55,745                                               & 55,886                                               & 55,815.50                                                                                                              \\ \hline
+		880                                                                                                                   & 47,741                                               & 48,072                                               & 47,906.50                                                                                                              \\ \hline
+		890                                                                                                                   & 43,481                                               & 43,661                                               & 43,571.00                                                                                                              \\ \hline
+	\caption{}
+	\label{tab:grs-table}
+	\end{longtable}
+%
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				xlabel={Voltage (\si{\volt})}, % \hertz requires SIunits
+				ylabel={Counts},
+				grid=both,
+				width=0.75\linewidth,mark=*,legend style={at={(0.3,0.96)}}]
+				\addplot[line width=1pt,color=blue,mark=*] %
+				table[x=Voltage,y=Avg Count,col sep=comma]{1210-data.csv};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Count versus voltage $ V $}
+		\label{fig:grs-plot}
+	\end{figure}
+
+\section{Result}
+
+Gamma ray spectrometer is calibrated.
+
+\end{document}

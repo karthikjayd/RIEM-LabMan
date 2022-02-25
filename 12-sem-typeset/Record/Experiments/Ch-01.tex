@@ -1,0 +1,138 @@
+%\documentclass[12pt]{report}
+%\author{Karthik J, Navya Jose}
+%\date{}
+%\usepackage{../sem12-lab-record}
+\lhead{Date: 19/07/2021}
+\begin{document}
+	
+	%\maketitle
+	
+	\chapter{Inverse Square Law (Gamma-radiation)}
+	\vspace{-1cm}
+	\dateofexp{Date of Experiment: 19/07/2021} 
+	% To display date in contents page
+	%
+	\begin{center}% To display date in the experiment page
+		Date of Experiment: 19/07/2021
+	\end{center}
+	\section{Aim}
+	To verify inverse square law for gamma rays using GM counter.
+	
+	\section{Requirements}
+	\begin{itemize}
+		\item 	Geiger M{\"u}ller counter
+		\item 	$ ^{137} $Cs as gamma source
+	\end{itemize}
+	
+	\section{Theory}
+	Any point source which spreads its influence equally in all directions, without a limit to its range, will obey the inverse square law. The intensity of the influence at any given radius $ r $ is equal to the source power divided by the area of the sphere. This comes strictly from geometrical considerations. As such, it applies to diverse phenomena. Point sources of light, sound and radiation obey the inverse square law.
+	
+	The theory therefore indicates that if a source emits gamma radiation equally in all directions and not absorbed by the material it passes through, then the intensity of radiation decreases with distance according to the inverse square law,
+	\begin{equation}{\label{eqn:inv-sq-law}}
+		I(r) \propto \dfrac{1}{r^2}
+	\end{equation}
+	
+	where, $ I(r) $ is the intensity of gamma radiation at $ r $ from the source. 
+	
+	Now, the number of counts $ N $ is proportional to the intensity of gamma radiation from the source. So the above equation \ref{eqn:inv-sq-law} can be written as
+	\begin{equation}{\label{eqn:inv-sq-law-N}}
+		N(r) \propto \dfrac{1}{r^2}
+	\end{equation}
+
+	Taking natural logarithms on both sides of the above equation, we get
+	\begin{equation}{\label{eqn:log-eqn}}
+		\ln N = \ln k - 2\ln r
+	\end{equation}
+	
+	From the plot of $ \ln N $ versus $ \ln r $, if the slope turns out to be $ -2 $, the inverse square law gets verified.
+	
+	\section{Procedure}
+	
+	\begin{enumerate}
+		\item 	 Setup the Geiger M{\"u}ller Tube and counter. Set the voltage of the GM tube to its optimal operating voltage, which should be around 450 volts.
+		\item 	 First do a run without a radioactive source to determine your background counts $ N_b $.
+		\item 	 From the preset menu, set Preset Time (\texttt{PT}) to 60 seconds. Do three trials and record the count in each case. Calculate the average background count by dividing the total number of count by three. This is the background count $ N_b $. Record it on your data page. Take the background count initially and at the end of the experiment.
+		\item  	Using the long tweezers pick the gamma source $ ^{137} $Cs and place it at some chosen distance.
+		\item 	With the detector and the source both in place, note down the count collected for 60 seconds. Take two trials and record the count.
+		\item  Repeat the above step for 11 different distances.
+		\item 	Now remove the source and do a run to determine the final background counts for 60 seconds.
+		\item 	Record all the distances $ r $ and the corresponding count rates $ N_i $ in an appropriate table (table \ref{tab:inv-sq-g-obs}).
+		\item 	Calculate the corrected count rates at the different distances by subtracting the average background count rate from actual value. 
+		\begin{equation}\label{eqn:background-count}
+			N = N_i - N_b
+		\end{equation}
+		Record these values of the corrected count rates in the table \ref{tab:inv-sq-g-obs}.
+		\item 	Calculate $ \ln N $ and $ \ln r $ from the table and plot graph of $ \ln N $ v/s $ \ln r $. Using least square method draw the best fit line for the above set of points. If all the points more or less are found to be on or near the straight line then the inverse square law is verified. Determine the slope and show that it is nearly equal to $ -2 $. This also verifies the inverse square law.
+		
+	\end{enumerate}
+	
+	\section{Observations \& Graph}
+	
+	The observations are tabulated in the table \ref{tab:inv-sq-g-obs}. The obtained plot of $ \ln N $ versus $ \ln r $ for the experimental data is given in figure \ref{fig:lnN-lnr}.\vspace{0.3cm}\\
+		Background counts, $ N_b = 37 $ ; Operating Voltage = \SI{450}{\volt}
+\begin{table}[H]
+	\begin{tabular}{|r|r|r|r|r|r|r|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}Distance} & \multicolumn{2}{c|}{\cellcolor[HTML]{EFEFEF}Count}                                                     & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Average $ N_i $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ N=N_i-N_b $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ \ln N $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ \ln r	 $} \\ \cline{2-3}
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}($ \times 10^{-2} $ m)}      & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Trial 1} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Trial 2} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}}           & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}}        & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}}     & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}}     \\ \hline
+		3.3                                                    & 13,002                                               & 12,980                                               & 12,991.0                                                & 12,954.0                                             & 9.469                                             & 1.194                                             \\ \hline
+		4.3                                                    & 7,522                                                & 7,381                                                & 7,451.5                                                 & 7,414.5                                              & 8.911                                             & 1.459                                             \\ \hline
+		5.3                                                    & 4,634                                                & 4,628                                                & 4,631.0                                                 & 4,594.0                                              & 8.433                                             & 1.668                                             \\ \hline
+		6.3                                                    & 3,281                                                & 3,279                                                & 3,280.0                                                 & 3,243.0                                              & 8.084                                             & 1.841                                             \\ \hline
+		7.3                                                    & 2,370                                                & 2,266                                                & 2,318.0                                                 & 2,281.0                                              & 7.732                                             & 1.988                                             \\ \hline
+		8.3                                                    & 1,734                                                & 1,731                                                & 1,732.5                                                 & 1,695.5                                              & 7.436                                             & 2.116                                             \\ \hline
+		9.3                                                    & 1,342                                                & 1,362                                                & 1,352.0                                                 & 1,315.0                                              & 7.182                                             & 2.230                                             \\ \hline
+		10.3                                                   & 1,042                                                & 1,072                                                & 1,057.0                                                 & 1,020.0                                              & 6.928                                             & 2.332                                             \\ \hline
+		11.3                                                   & 903                                                  & 900                                                  & 901.5                                                   & 864.5                                                & 6.762                                             & 2.425                                             \\ \hline
+		12.3                                                   & 761                                                  & 778                                                  & 769.5                                                   & 732.5                                                & 6.596                                             & 2.510                                             \\ \hline
+		13.3                                                   & 657                                                  & 653                                                  & 655.0                                                   & 618.0                                                & 6.426                                             & 2.588                                             \\ \hline
+	\end{tabular}
+	\caption{Observations}
+	\label{tab:inv-sq-g-obs}
+\end{table}
+\clearpage
+	%
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[title={Plot of $ \ln N $ v/s $ \ln r $ (Gamma)}, grid,x tick label style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1,/tikz/.cd},y tick label style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1,/tikz/.cd}, ytick={6.5,7.0,...,10.0}, xlabel = {$ \ln r $}, ylabel={$ \ln N $},width=0.75\linewidth]
+			\addplot[domain=1.1939:2.5878, thick, smooth, no markers] {-2.2*x + 12.12};
+			\addlegendentry{Linear Fit line}
+			
+%			\addplot[only marks] file {1201-data.txt};
+			\addplot[only marks, blue] coordinates {
+				(1.1939,9.4692)
+				(1.4586,8.9112)
+				(1.6677,8.4325)
+				(1.8405,8.0843)
+				(1.9879,7.7324)
+				(2.1163,7.4357)
+				(2.2300,7.1816)
+				(2.3321,6.9276)
+				(2.4248,6.7622)
+				(2.5096,6.5965)
+				(2.5878,6.4265)
+			};
+			\addlegendentry{Experimental Data};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Plot of $ \ln N $ versus $ \ln r $ ; The slope of the least-square fit line is $ -2.21 $ units, and $ y $-intercept is $ 12.12 $ units.}
+	\label{fig:lnN-lnr}
+\end{figure}
+		%
+%	The plot of $ \ln N $ versus $ \ln r $ is shown in figure \ref{fig:plot}.
+%	\begin{figure}[!htb]
+%		\centering
+%		\includegraphics[width=0.8\textwidth]{./Experiments/1201-plot.png}
+%		\caption{Plot of $\ln N$ versus $ \ln d $ }
+%		\label{fig:plot}
+%	\end{figure}
+	
+	\section{Result}
+	Since the slope of the $ \ln N $ versus $ \ln r $ curve is approximately $ -2  $ units, the inverse square law has been verified for gamma particles.
+	
+%	\section{References}
+	
+\end{document}

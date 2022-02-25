@@ -1,0 +1,96 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lipsum}
+\usepackage{fancyhdr,graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{titlesec}
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{breqn}
+\usepackage{multicol,multirow}
+\usepackage{tcolorbox}
+\usepackage{subfiles}
+\usepackage{ragged2e}
+\usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{nicefrac}
+\usepackage{blindtext}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{floatflt}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{breqn}
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside%
+	\ifodd\c@page\else
+	\vspace*{\fill}
+	\hfill
+	\begin{center}
+		This page intentionally left blank.
+	\end{center}
+	\vspace{\fill}
+	\thispagestyle{empty}
+	\newpage
+	\if@twocolumn\hbox{}\newpage\fi\fi\fi
+}
+\makeatother
+
+\newcommand{\pto}{\begin{center}
+		\emph{Observations \& Graphs on next page}
+\end{center}}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{Experiment \thechapter.\space#1}{}}
+\lhead{}
+\lfoot{Core Lab IV}
+\rfoot{RIE Mysore}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand*\contentsname{Experiments}
+\setcounter{tocdepth}{0}
+
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Large} % format % Use \itshape if you want to make it italicized too
+{\vspace{-2cm}Experiment \thechapter} % label
+{0.5ex} % sep
+{
+	\rule{\textwidth}{2pt}
+	\vspace{3pt}
+	\centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}\\
+] % after-code
+
+
+\titleformat{name=\section}[block]
+{\large\filcenter\scshape}
+{}
+{0pt}
+{\colorsection}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+
+\newcommand{\colorsection}[1]{%
+	\colorbox{blue!10}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+
+\titleformat{name=\subsection}[block]
+{\large}
+{}
+{0pt}
+{\colorsubsection}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+
+\newcommand{\colorsubsection}[1]{%
+	\colorbox{orange!20}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
+

@@ -1,0 +1,197 @@
+\lhead{Date: 26/07/2021}  % For date in header
+
+% REMOVE the % sign in the above lines if you want to
+% compile this experiment file separately.
+
+\begin{document}
+	
+	\chapter{Mass Absorption Coefficient} % Replace the text with the title of the experiment
+	\vspace{-1cm}
+	\dateofexp{Date of Experiment: 26/07/2021} 
+	% To display date in contents page
+	
+	\begin{center}% To display date of experiment in the title
+		Date of Experiment: 26/07/2021
+	\end{center}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% THE EXPERIMENT STARTS HERE %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Aim}
+	To determine the mass absorption coefficient of aluminium for beta particles using GM
+	counter.
+	
+	\section{Requirements}
+	\begin{itemize}
+		\item 	GM counter
+		\item 	Beta source Strontium $ ^{90} $Sr
+	\end{itemize}
+	
+	\section{Theory}
+	Beta particles from a radioactive source are not emitted with the same energy. They have an energy spectrum ranging from 0 up to a maximum value which is characteristic of the beta emitter. The maximum energy of the beta particles determines the greatest range that the beta radiation will have in matter. But the average beta particle energy is more representative of the beta spectrum as a whole.
+	
+	Mono-energetic electrons known as conversion electrons and Auger electron are produced by the radioactive decay processes distinct from that which give rise to continuous beta spectrum. Conversion electron emission often competes with gamma ray emission is due to non-radioactive interaction with inner shell electrons of the atom.
+	
+	The passage of continuous beta particles from a radioactive source through the matter is characterized by an exponential variation of their number with thickness of matter. The number of transmitted electrons $ N $ in a thickness $ t $ of the absorber is given by
+	\begin{equation}\label{eqn:mass-absorption}
+		N = N_0 \exp(-\mu t)
+	\end{equation}
+	Taking natural logarithms on both sides, we get
+	\begin{equation}\label{eqn:mass-absorption-log}
+		\ln N = \ln N_0 - \left(\dfrac{\mu}{\rho}\right) (\rho t)
+	\end{equation}
+	where, $ \mu $ is called the \emph{absorption coefficient}. In the second equation, $ \nicefrac{\mu}{\rho} $ is called the \emph{mass absorption coefficient} and $ N_0 $, the initial intensity. When the thickness of the absorber is increased, the absorption curve drops exponentially and finally merges to background intensity. The end of the absorption curve corrected for this background intensity represents the true range `$ R $'. The mass absorption coefficient is also dependent in a unique way on $ E_0 $, the end point energy.
+	
+\section{Procedure}
+
+\begin{enumerate}
+	\item 	The operating voltage is set at \SI{600}{\volt}.
+	\item 	The background counts are determined for 60 seconds.
+	\item 	Place the source Strontium-90 on the source holder and record the counts for a suitable time.
+	\item 	The Aluminium absorbers are introduced between the source and the detector as close to the detector as possible.
+	\item 	Again, the counts are determined for 60 seconds, each time on introducing absorbers of thickness 0.05 mm. The results are tabulated.
+	\item 	A least square fit graph is drawn for $ \ln N $ v/s $ \rho t $ and slope is determined. The numerical value of slope gives the mass absorption coefficient.
+	
+\end{enumerate}
+
+\newpage
+\section{Observations \& Graph}
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+	\begin{longtable}{|r|r|r|r|r|r|}
+			\hline
+			\rowcolor[HTML]{EFEFEF} 
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Thickness\\ (mm)\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Thickness \\ ($ \times 10^{-4} $ m)\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}$ \rho \cdot t $\\ (\si{\kilo\gram\per\meter\squared})\end{tabular}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}Count} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}Actual Count} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}$ \ln N $} \\ \hline
+			0.00                                                                                                   & 0.0                                                                                                   & 0.000                                                                                          & 49,921                                             & 49,895                                                    & 10.818                                            \\ \hline
+			0.05                                                                                                   & 0.5                                                                                                   & 0.136                                                                                          & 45,089                                             & 45,063                                                    & 10.716                                            \\ \hline
+			0.10                                                                                                   & 1.0                                                                                                   & 0.271                                                                                          & 40,391                                             & 40,365                                                    & 10.606                                            \\ \hline
+			0.15                                                                                                   & 1.5                                                                                                   & 0.407                                                                                          & 37,370                                             & 37,344                                                    & 10.528                                            \\ \hline
+			0.20                                                                                                   & 2.0                                                                                                   & 0.542                                                                                          & 34,661                                             & 34,635                                                    & 10.453                                            \\ \hline
+			0.25                                                                                                   & 2.5                                                                                                   & 0.678                                                                                          & 32,925                                             & 32,899                                                    & 10.401                                            \\ \hline
+			0.30                                                                                                   & 3.0                                                                                                   & 0.813                                                                                          & 30,426                                             & 30,400                                                    & 10.322                                            \\ \hline
+			0.35                                                                                                   & 3.5                                                                                                   & 0.949                                                                                          & 29,192                                             & 29,166                                                    & 10.281                                            \\ \hline
+			0.40                                                                                                   & 4.0                                                                                                   & 1.084                                                                                          & 27,159                                             & 27,133                                                    & 10.209                                            \\ \hline
+			0.45                                                                                                   & 4.5                                                                                                   & 1.220                                                                                          & 26,314                                             & 26,288                                                    & 10.177                                            \\ \hline
+			0.50                                                                                                   & 5.0                                                                                                   & 1.355                                                                                          & 24,773                                             & 24,747                                                    & 10.116                                            \\ \hline
+			0.55                                                                                                   & 5.5                                                                                                   & 1.491                                                                                          & 23,521                                             & 23,495                                                    & 10.065                                            \\ \hline
+			0.60                                                                                                   & 6.0                                                                                                   & 1.626                                                                                          & 22,200                                             & 22,174                                                    & 10.007                                            \\ \hline
+			0.65                                                                                                   & 6.5                                                                                                   & 1.762                                                                                          & 21,564                                             & 21,538                                                    & 9.978                                             \\ \hline
+			0.70                                                                                                   & 7.0                                                                                                   & 1.897                                                                                          & 20,807                                             & 20,781                                                    & 9.942                                             \\ \hline
+			0.75                                                                                                   & 7.5                                                                                                   & 2.033                                                                                          & 20,042                                             & 20,016                                                    & 9.904                                             \\ \hline
+			0.80                                                                                                   & 8.0                                                                                                   & 2.168                                                                                          & 19,037                                             & 19,011                                                    & 9.853                                             \\ \hline
+			0.85                                                                                                   & 8.5                                                                                                   & 2.304                                                                                          & 18,422                                             & 18,396                                                    & 9.820                                             \\ \hline
+			0.90                                                                                                   & 9.0                                                                                                   & 2.439                                                                                          & 17,396                                             & 17,370                                                    & 9.762                                             \\ \hline
+			0.95                                                                                                   & 9.5                                                                                                   & 2.575                                                                                          & 16,819                                             & 16,793                                                    & 9.729                                             \\ \hline
+			1.00                                                                                                   & 10.0                                                                                                  & 2.710                                                                                          & 15,888                                             & 15,862                                                    & 9.672                                             \\ \hline
+			1.05                                                                                                   & 10.5                                                                                                  & 2.846                                                                                          & 14,942                                             & 14,916                                                    & 9.610                                             \\ \hline
+			1.10                                                                                                   & 11.0                                                                                                  & 2.981                                                                                          & 14,301                                             & 14,275                                                    & 9.566                                             \\ \hline
+			1.15                                                                                                   & 11.5                                                                                                  & 3.117                                                                                          & 13,597                                             & 13,571                                                    & 9.516                                             \\ \hline
+			1.20                                                                                                   & 12.0                                                                                                  & 3.252                                                                                          & 13,032                                             & 13,006                                                    & 9.473                                             \\ \hline
+			1.25                                                                                                   & 12.5                                                                                                  & 3.388                                                                                          & 12,617                                             & 12,591                                                    & 9.441                                             \\ \hline
+			1.30                                                                                                   & 13.0                                                                                                  & 3.523                                                                                          & 11,761                                             & 11,735                                                    & 9.370                                             \\ \hline
+			1.35                                                                                                   & 13.5                                                                                                  & 3.659                                                                                          & 11,270                                             & 11,244                                                    & 9.328                                             \\ \hline
+			1.40                                                                                                   & 14.0                                                                                                  & 3.794                                                                                          & 10,593                                             & 10,567                                                    & 9.265                                             \\ \hline
+			1.45                                                                                                   & 14.5                                                                                                  & 3.930                                                                                          & 9,914                                              & 9,888                                                     & 9.199                                             \\ \hline
+			1.50                                                                                                   & 15.0                                                                                                  & 4.065                                                                                          & 9,322                                              & 9,296                                                     & 9.137                                             \\ \hline
+			1.55                                                                                                   & 15.5                                                                                                  & 4.201                                                                                          & 8,916                                              & 8,890                                                     & 9.093                                             \\ \hline
+			1.60                                                                                                   & 16.0                                                                                                  & 4.336                                                                                          & 8,613                                              & 8,587                                                     & 9.058                                             \\ \hline
+			1.65                                                                                                   & 16.5                                                                                                  & 4.472                                                                                          & 7,985                                              & 7,959                                                     & 8.982                                             \\ \hline
+			1.70                                                                                                   & 17.0                                                                                                  & 4.607                                                                                          & 7,745                                              & 7,719                                                     & 8.951                                             \\ \hline
+			1.75                                                                                                   & 17.5                                                                                                  & 4.743                                                                                          & 7,192                                              & 7,166                                                     & 8.877                                             \\ \hline
+			1.80                                                                                                   & 18.0                                                                                                  & 4.878                                                                                          & 6,766                                              & 6,740                                                     & 8.816                                             \\ \hline
+		\caption{Observations}
+		\label{tab:mass-abs-coeff}
+		\end{longtable}
+%
+%
+%\begin{figure}[H]
+%	\centering
+%	\resizebox {0.8\textwidth} {!} {
+%	\begin{tikzpicture}
+%		\begin{axis}[title={Plot of $ \ln N $ v/s $ \rho t $}, grid,x tick label style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1,/tikz/.cd},y tick label style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1,/tikz/.cd}, xlabel = {$ \rho t $}, ylabel={$ \ln N $}]
+%			\addplot[domain=0:4.878, thick, smooth, no markers] {-0.38*x + 10.68};
+%			\addlegendentry{Linear Fit line}
+%			
+%			%			\addplot[only marks] file {1201-data.txt};
+%			\addplot[only marks] coordinates {
+%				(0,10.81767608)
+%				(0.1355,10.71581679)
+%				(0.271,10.60571835)
+%				(0.4065,10.52792754)
+%				(0.542,10.45262001)
+%				(0.6775,10.40119754)
+%				(0.813,10.32219789)
+%				(0.9485,10.28075893)
+%				(1.084,10.20850598)
+%				(1.2195,10.17686784)
+%				(1.355,10.11645955)
+%				(1.4905,10.06454291)
+%				(1.626,10.00667571)
+%				(1.7615,9.977574096)
+%				(1.897,9.941794387)
+%				(2.0325,9.904287233)
+%				(2.168,9.852773038)
+%				(2.3035,9.819888529)
+%				(2.439,9.762499859)
+%				(2.5745,9.728717412)
+%				(2.71,9.671681591)
+%				(2.8455,9.610189741)
+%				(2.981,9.566265035)
+%				(3.1165,9.515690442)
+%				(3.252,9.473166068)
+%				(3.3875,9.440737552)
+%				(3.523,9.370331108)
+%				(3.6585,9.327589932)
+%				(3.794,9.265491216)
+%				(3.9295,9.19907718)
+%				(4.065,9.137339479)
+%				(4.2005,9.092682329)
+%				(4.336,9.058004711)
+%				(4.4715,8.982058643)
+%				(4.607,8.951440101)
+%				(4.7425,8.877102898)
+%				(4.878,8.815815204)
+%			};
+%			\addlegendentry{Experimental Data};
+%		\end{axis}
+%	\end{tikzpicture}
+%}
+%	\caption{Plot of $ \ln N $ versus $ \rho t $ ; The slope of the least-square fit line is \SI{-0.3769}{\meter\squared\per\kilo\gram}, and $ y $-intercept is $ 10.677 $ units.}
+%	\label{fig:lnN-rho-t}
+%\end{figure}
+
+\begin{figure}[H]
+	\centering
+	%	\includegraphics[width=0.8\linewidth]{../09-MagnetoResistance/Retry/1209-plot-01}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel={$ \rho t $ (\si{\kilo\gram\meter\squared})}, 
+			ylabel={$ \ln N $},
+			grid=both,
+			minor grid style={gray!25},
+			major grid style={gray!25},
+			width=0.75\linewidth,mark=*,legend style={at={(0.95,0.96)}}, only marks,y tick label style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1,/tikz/.cd}]
+			\addplot[line width=1pt,color=blue,mark=*] %
+			table[x=rhot,y=lnN,col sep=comma]{1207-data.csv};
+			\addlegendentry{Observed Data};
+			
+			\addplot[domain=0:5, line width=1.1pt, smooth, no markers] {-0.3769*x + 10.68};
+			\addlegendentry{Linear Fit line}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Plot of $ \ln N $ versus $ \rho t $ ; slope of the least square fit line $ = \SI{-0.3769}{\meter\squared\per\kilo\gram} $ and $ y $-intercept $ = 10.68 $}
+	\label{fig:1207-plot}
+\end{figure}
+
+\section{Calculation}
+\noindent From the graph,\\
+slope = \SI{-0.3769}{\meter\squared\per\kilo\gram}\\
+$ \therefore \boxed{\mu/\rho =  \SI{0.3769}{\meter\squared\per\kilo\gram}} $
+
+\section{Result}
+Mass absorption coefficient of aluminium for beta rays is found to be \SI{0.3769}{\meter\squared\per\kilo\gram} .
+
+\end{document}

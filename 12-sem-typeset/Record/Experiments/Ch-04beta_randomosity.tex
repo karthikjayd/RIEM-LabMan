@@ -1,0 +1,279 @@
+%\documentclass[12pt]{report}
+%\author{}
+%\date{}
+%\usepackage{../sem12-lab-record}
+\lhead{Date: 22/07/2021}  % For date in header
+
+% REMOVE the % sign in the above lines if you want to
+% compile this experiment file separately.
+
+\begin{document}
+	
+	\chapter{Randomosity of Beta radiation } % Replace the text with the title of the experiment
+	\vspace{-1cm}
+	\dateofexp{Date of Experiment: 22/07/2021} 
+	% To display date in contents page
+	
+	\begin{center}% To display date of experiment in the title
+		Date of Experiment: 22/07/2021
+	\end{center}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% THE EXPERIMENT STARTS HERE %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Aim}
+	\begin{itemize}
+		\item To study the randomness of Gamma emission.
+		\item To verify that the obtained distribution is Gaussian.
+	\end{itemize}
+	
+	\section{Requirements}
+	\begin{itemize}
+		\item 	Geiger M{\"u}ller counter
+		\item 	$ ^{204} $Tl as Beta source
+	\end{itemize}
+	
+	\section{Theory}
+	The radioactive decay is a random process. Consequently any measurement based on observing the radiation emitted in a nuclear decay is subject to some degree of statistical fluctuations although each measurement for a radioactive sample is independent of all previous measurements. The deviation of the individual count rates from the average count rate behaves in a predictable manner. If we observe a given radioactive nucleus for a time t and define the success as the nuclide decays during the process, then the probability of success $ p $ is given by 
+	\begin{equation} 
+		p = 1-e^{-\lambda t}
+	\end{equation}  where $\lambda$ is the decay constant. \\
+	
+	Assume that there is a collection of $ N $ independent measurements of the same physical quantity. If each of these $ N $ measurements is denoted
+	as $x_{1}, x_{2}, \ldots , x_{N}$, the experimental mean is given by
+	\begin{equation}{\label{eqn:1204-mean}}
+		\bar{x}=\sum\limits_{i=1}^{N}\dfrac{x_i}{N}
+	\end{equation}
+	The probability $p(x)$ of observing $x$ counts (events) in a fixed time interval is described by Poisson distribution.\\
+	For normal distribution, total probability is one. When the mean is large ($\bar{x}$ is greater than 30), then Poisson distribution transforms into a Gaussian distribution as:
+	\begin{equation}{\label{eqn:stdev}}
+		p(x)=\dfrac{1}{\sigma\sqrt{2 \pi}} e^{\nicefrac{-(x-\bar{x})^2}{2 \sigma^2}}
+	\end{equation}
+	The standard deviation $\sigma^2 = (\overline{x^2}) - (\bar{x})^2$.
+\section{Procedure}
+	
+	\begin{enumerate}
+		\item 	 Setup the Geiger M{\"u}ller Tube and counter. Set the voltage of the GM tube to its optimal operating voltage, which should be around \SI{450}{\volt}.
+		\item 	  Don't put any source in the counter. Also remove all the sources in the vicinity of the counter. Take three independent readings of the background counts for a pre-set time of 30 seconds.
+		\item  Set the time for 30 seconds. Start the counting system and note down counts at the end of every 30s continuously for $N=50$ trials.
+		
+		\item Find the maximum \& minimum count and form class intervals. Find the frequency of each class interval. Calculate the probability of each class interval by dividing the frequency of each class interval by 50.
+		
+		\item 	Plot the Probability versus class interval as a histogram.
+		
+		\item 	Determine the standard deviation of the counts obtained and plot the Gaussian function in equation using the data \& the standard deviation. Verify that the nature of the two graphs are same.
+		
+	\end{enumerate}
+
+ \section{Observations \& Graph}
+ %
+
+ \begin{longtable}{|
+ 		>{\columncolor[HTML]{FFFFFF}}l |r|r|}
+ 	\hline
+ 	\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}Class Interval} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Frequency} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Probability} \\ \hline
+ 	\endfirsthead
+ 	%
+ 	\endhead
+ 	%
+ 	$ 795 - 800 $                                                & 0                                                      & 0.00                                                     \\ \hline
+ 	$ 800 - 805 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$805-810 $                                                     & 1                                                      & 0.01                                                     \\ \hline
+ 	$ 810 - 815 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 815 - 820 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 820 - 825 $                                                & 1                                                      & 0.01                                                     \\ \hline
+ 	$ 825 - 830 $                                                & 5                                                      & 0.05                                                     \\ \hline
+ 	$ 830 - 835 $                                                & 3                                                      & 0.03                                                     \\ \hline
+ 	$ 835 - 840 $                                                & 4                                                      & 0.04                                                     \\ \hline
+ 	$ 840 - 845 $                                                & 5                                                      & 0.05                                                     \\ \hline
+ 	$ 845 - 850 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 850 - 855 $                                                & 4                                                      & 0.04                                                     \\ \hline
+ 	$ 855 - 860 $                                                & 9                                                      & 0.09                                                     \\ \hline
+ 	$ 860 - 865 $                                                & 5                                                      & 0.05                                                     \\ \hline
+ 	$ 865 - 870 $                                                & 9                                                      & 0.09                                                     \\ \hline
+ 	$ 870 - 875 $                                                & 10                                                     & 0.10                                                     \\ \hline
+ 	$ 875 - 880 $                                                & 8                                                      & 0.08                                                     \\ \hline
+ 	$ 880 - 885 $                                                & 5                                                      & 0.05                                                     \\ \hline
+ 	$ 885 - 890 $                                                & 5                                                      & 0.05                                                     \\ \hline
+ 	$ 890 - 895 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 895 - 900 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 900 - 905 $                                                & 3                                                      & 0.03                                                     \\ \hline
+ 	$ 905 - 910 $                                                & 0                                                      & 0.00                                                     \\ \hline
+ 	$ 910 - 915 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 915 - 920 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 920 - 925 $                                                & 3                                                      & 0.03                                                     \\ \hline
+ 	$ 925 - 930 $                                                & 2                                                      & 0.02                                                     \\ \hline
+ 	$ 930 - 935 $                                                & 1                                                      & 0.01                                                     \\ \hline
+ 	$ 935 - 940 $                                                & 1                                                      & 0.01                                                     \\ \hline
+ 	$ 940 - 945 $                                                & 0                                                      & 0.00                                                     \\ \hline
+ 	$ 945 - 950 $                                                & 0                                                      & 0.00                                                     \\ \hline
+ 	\caption{}
+ 	\label{tab:1204-obs-freq}\\
+ \end{longtable}
+% \clearpage
+\noindent Standard Deviation $ \sigma = 30.3477 $\\
+Mean $ \bar{x} = 862.26 $
+\begin{longtable}{|r|r|r|r|}
+	\hline
+	\rowcolor[HTML]{EFEFEF} 
+	\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}Count\\ $ x $\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ x-\bar{x} $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}$ (x-\bar{x})^2 $} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}c@{}}$ p(x) $\\ $ (\times 10^{-4}) $\end{tabular}} \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	850                                                                                             & -12                                               & 144                                                  & 12.116                                                                                         \\ \hline
+	871                                                                                             & 9                                                 & 81                                                   & 12.612                                                                                         \\ \hline
+	863                                                                                             & 1                                                 & 1                                                    & 13.142                                                                                         \\ \hline
+	924                                                                                             & 62                                                & 3844                                                 & 1.660                                                                                          \\ \hline
+	922                                                                                             & 60                                                & 3600                                                 & 1.894                                                                                          \\ \hline
+	852                                                                                             & -10                                               & 100                                                  & 12.416                                                                                         \\ \hline
+	870                                                                                             & 8                                                 & 64                                                   & 12.725                                                                                         \\ \hline
+	846                                                                                             & -16                                               & 256                                                  & 11.388                                                                                         \\ \hline
+	857                                                                                             & -5                                                & 25                                                   & 12.950                                                                                         \\ \hline
+	913                                                                                             & 51                                                & 2601                                                 & 3.249                                                                                          \\ \hline
+	874                                                                                             & 12                                                & 144                                                  & 12.198                                                                                         \\ \hline
+	797                                                                                             & -65                                               & 4225                                                 & 1.302                                                                                          \\ \hline
+	858                                                                                             & -4                                                & 16                                                   & 13.017                                                                                         \\ \hline
+	826                                                                                             & -36                                               & 1296                                                 & 6.439                                                                                          \\ \hline
+	864                                                                                             & 2                                                 & 4                                                    & 13.124                                                                                         \\ \hline
+	883                                                                                             & 21                                                & 441                                                  & 10.408                                                                                         \\ \hline
+	867                                                                                             & 5                                                 & 25                                                   & 12.986                                                                                         \\ \hline
+	863                                                                                             & 1                                                 & 1                                                    & 13.142                                                                                         \\ \hline
+	834                                                                                             & -28                                               & 784                                                  & 8.521                                                                                          \\ \hline
+	842                                                                                             & -20                                               & 400                                                  & 10.520                                                                                         \\ \hline
+	880                                                                                             & 18                                                & 324                                                  & 11.081                                                                                         \\ \hline
+	896                                                                                             & 34                                                & 1156                                                 & 7.086                                                                                          \\ \hline
+	888                                                                                             & 26                                                & 676                                                  & 9.174                                                                                          \\ \hline
+	852                                                                                             & -10                                               & 100                                                  & 12.416                                                                                         \\ \hline
+	885                                                                                             & 23                                                & 529                                                  & 9.928                                                                                          \\ \hline
+	865                                                                                             & 3                                                 & 9                                                    & 13.092                                                                                         \\ \hline
+	852                                                                                             & -10                                               & 100                                                  & 12.416                                                                                         \\ \hline
+	815                                                                                             & -47                                               & 2209                                                 & 3.910                                                                                          \\ \hline
+	868                                                                                             & 6                                                 & 36                                                   & 12.913                                                                                         \\ \hline
+	850                                                                                             & -12                                               & 144                                                  & 12.116                                                                                         \\ \hline
+	852                                                                                             & -10                                               & 100                                                  & 12.416                                                                                         \\ \hline
+	883                                                                                             & 21                                                & 441                                                  & 10.408                                                                                         \\ \hline
+	873                                                                                             & 11                                                & 121                                                  & 12.348                                                                                         \\ \hline
+	865                                                                                             & 3                                                 & 9                                                    & 13.092                                                                                         \\ \hline
+	840                                                                                             & -22                                               & 484                                                  & 10.045                                                                                         \\ \hline
+	824                                                                                             & -38                                               & 1444                                                 & 5.938                                                                                          \\ \hline
+	893                                                                                             & 31                                                & 961                                                  & 7.870                                                                                          \\ \hline
+	818                                                                                             & -44                                               & 1936                                                 & 4.538                                                                                          \\ \hline
+	833                                                                                             & -29                                               & 841                                                  & 8.259                                                                                          \\ \hline
+	853                                                                                             & -9                                                & 81                                                   & 12.548                                                                                         \\ \hline
+	837                                                                                             & -25                                               & 625                                                  & 9.297                                                                                          \\ \hline
+	807                                                                                             & -55                                               & 3025                                                 & 2.505                                                                                          \\ \hline
+	913                                                                                             & 51                                                & 2601                                                 & 3.249                                                                                          \\ \hline
+	800                                                                                             & -62                                               & 3844                                                 & 1.603                                                                                          \\ \hline
+	870                                                                                             & 8                                                 & 64                                                   & 12.725                                                                                         \\ \hline
+	872                                                                                             & 10                                                & 100                                                  & 12.486                                                                                         \\ \hline
+	822                                                                                             & -40                                               & 1600                                                 & 5.453                                                                                          \\ \hline
+	861                                                                                             & -1                                                & 1                                                    & 13.134                                                                                         \\ \hline
+	836                                                                                             & -26                                               & 676                                                  & 9.041                                                                                          \\ \hline
+	836                                                                                             & -26                                               & 676                                                  & 9.041                                                                                          \\ \hline
+	832                                                                                             & -30                                               & 900                                                  & 7.996                                                                                          \\ \hline
+	866                                                                                             & 4                                                 & 16                                                   & 13.046                                                                                         \\ \hline
+	862                                                                                             & 0                                                 & 0                                                    & 13.145                                                                                         \\ \hline
+	875                                                                                             & 13                                                & 169                                                  & 12.037                                                                                         \\ \hline
+	851                                                                                             & -11                                               & 121                                                  & 12.271                                                                                         \\ \hline
+	883                                                                                             & 21                                                & 441                                                  & 10.408                                                                                         \\ \hline
+	873                                                                                             & 11                                                & 121                                                  & 12.348                                                                                         \\ \hline
+	830                                                                                             & -32                                               & 1024                                                 & 7.472                                                                                          \\ \hline
+	917                                                                                             & 55                                                & 3025                                                 & 2.584                                                                                          \\ \hline
+	876                                                                                             & 14                                                & 196                                                  & 11.865                                                                                         \\ \hline
+	906                                                                                             & 44                                                & 1936                                                 & 4.653                                                                                          \\ \hline
+	883                                                                                             & 21                                                & 441                                                  & 10.408                                                                                         \\ \hline
+	935                                                                                             & 73                                                & 5329                                                 & 0.743                                                                                          \\ \hline
+	927                                                                                             & 65                                                & 4225                                                 & 1.351                                                                                          \\ \hline
+	864                                                                                             & 2                                                 & 4                                                    & 13.124                                                                                         \\ \hline
+	888                                                                                             & 26                                                & 676                                                  & 9.174                                                                                          \\ \hline
+	876                                                                                             & 14                                                & 196                                                  & 11.865                                                                                         \\ \hline
+	845                                                                                             & -17                                               & 289                                                  & 11.183                                                                                         \\ \hline
+	866                                                                                             & 4                                                 & 16                                                   & 13.046                                                                                         \\ \hline
+	814                                                                                             & -48                                               & 2304                                                 & 3.712                                                                                          \\ \hline
+	868                                                                                             & 6                                                 & 36                                                   & 12.913                                                                                         \\ \hline
+	875                                                                                             & 13                                                & 169                                                  & 12.037                                                                                         \\ \hline
+	920                                                                                             & 58                                                & 3364                                                 & 2.151                                                                                          \\ \hline
+	850                                                                                             & -12                                               & 144                                                  & 12.116                                                                                         \\ \hline
+	893                                                                                             & 31                                                & 961                                                  & 7.870                                                                                          \\ \hline
+	880                                                                                             & 18                                                & 324                                                  & 11.081                                                                                         \\ \hline
+	870                                                                                             & 8                                                 & 64                                                   & 12.725                                                                                         \\ \hline
+	858                                                                                             & -4                                                & 16                                                   & 13.017                                                                                         \\ \hline
+	825                                                                                             & -37                                               & 1369                                                 & 6.187                                                                                          \\ \hline
+	824                                                                                             & -38                                               & 1444                                                 & 5.938                                                                                          \\ \hline
+	834                                                                                             & -28                                               & 784                                                  & 8.521                                                                                          \\ \hline
+	851                                                                                             & -11                                               & 121                                                  & 12.271                                                                                         \\ \hline
+	855                                                                                             & -7                                                & 49                                                   & 12.775                                                                                         \\ \hline
+	857                                                                                             & -5                                                & 25                                                   & 12.950                                                                                         \\ \hline
+	829                                                                                             & -33                                               & 1089                                                 & 7.210                                                                                          \\ \hline
+	852                                                                                             & -10                                               & 100                                                  & 12.416                                                                                         \\ \hline
+	918                                                                                             & 56                                                & 3136                                                 & 2.434                                                                                          \\ \hline
+	908                                                                                             & 46                                                & 2116                                                 & 4.222                                                                                          \\ \hline
+	839                                                                                             & -23                                               & 529                                                  & 9.800                                                                                          \\ \hline
+	809                                                                                             & -53                                               & 2809                                                 & 2.818                                                                                          \\ \hline
+	878                                                                                             & 16                                                & 256                                                  & 11.491                                                                                         \\ \hline
+	870                                                                                             & 8                                                 & 64                                                   & 12.725                                                                                         \\ \hline
+	801                                                                                             & -61                                               & 3721                                                 & 1.714                                                                                          \\ \hline
+	859                                                                                             & -3                                                & 9                                                    & 13.070                                                                                         \\ \hline
+	897                                                                                             & 35                                                & 1225                                                 & 6.827                                                                                          \\ \hline
+	824                                                                                             & -38                                               & 1444                                                 & 5.938                                                                                          \\ \hline
+	898                                                                                             & 36                                                & 1296                                                 & 6.571                                                                                          \\ \hline
+	867                                                                                             & 5                                                 & 25                                                   & 12.986                                                                                         \\ \hline
+	872                                                                                             & 10                                                & 100                                                  & 12.486                                                                                         \\ \hline
+	861                                                                                             & -1                                                & 1                                                    & 13.134                                                                                         \\ \hline
+	\caption{}
+	\label{tab:1204-obs-gauss}
+\end{longtable}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		%			\pgfplotsset{set layers}
+		\begin{axis}[xlabel={Count classes}, 
+			ylabel={Probability},set layers,
+			ymin=0,width=0.8\linewidth,
+			grid]
+			\addplot+[ybar interval,mark=no,fill=blue!20,draw=black,line width=1pt] 
+			table[x=Class,y=Prob,col sep=comma]{1204-data.csv};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Histogram of Probability versus Class intervals (of size 5)}
+\end{figure}
+%
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[width=0.6\textwidth,
+			thick,
+			grid=both,ymin = 0,y tick label style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1,/tikz/.cd}, xlabel ={$ x $}, ylabel = {$ p(x) $}]
+			
+			%			\addplot[blue,domain=-5:5] {exp(-0.5*(((x-2693)/49.978)^2))};
+			\addplot[blue,domain=712.26:1012.26,smooth,samples=1000] { (1/(30.3477*sqrt(2*pi)))*exp(-(((x-862.26)^2)/(2*(30.3477)^2))) };
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Plot of Gaussian function corresponding to the counts in \ref{tab:1204-obs-gauss}. $ \bar{x} = 862 $ and $ \sigma = 30.347 $}
+\end{figure}
+
+	%
+%	The plot of probability versus count is shown in figure \ref{fig:plot}.
+%	\begin{figure}[!htb]
+%		\centering
+%		\includegraphics[width=0.90\textwidth]{Experiments/ca 1.jpg}
+%		\caption{Plot of probability vs count }
+%		\label{fig:plot}
+%	\end{figure} \clearpage
+	
+%	The plot of probability (using eqn 1.3)
+% versus count is shown in figure\ref{fig:plot 1}.
+%	\begin{figure}[!htb]
+%		\centering
+%		\includegraphics[width=0.90\textwidth]{Experiments/ca2.jpg}
+%		\caption{Plot of probability vs count }
+%		\label{fig:plot 1}
+%	\end{figure} 
+	\section{Result}
+    The randomness of Beta emission is studied and obtained distribution is Gaussian in nature.
+	%	\section{References}
+	
+\end{document}
